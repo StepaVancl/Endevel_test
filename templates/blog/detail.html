@@ -1,0 +1,9 @@
+<h1>{{ article.title }}</h1>
+
+<p>{{ article.article_text }}</p>
+<p>-----------</p>
+{% for t in tags %}
+  <a href="/blog/?tag_id={{ t.id }}" >
+    {{ t.tag }}
+  </a><br>
+{% endfor %}

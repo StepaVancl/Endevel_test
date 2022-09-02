@@ -1,0 +1,13 @@
+<h1>Articles</h1>
+{% for a in articles %}
+  <a href="{% url 'blog:detail' article_id=a.id %}" >
+    {{ a.title }}
+  </a><br>
+{% endfor %}
+
+<p>----------------</p>
+{% for t in tags %}
+  <a href="/blog/?tag_id={{ t.id }}" >
+    {{ t.tag }}
+  </a><br>
+{% endfor %}
